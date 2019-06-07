@@ -32,4 +32,10 @@ steps:
     sourceFolder: '$(Agent.BuildDirectory)/s/hyscale'
     contents: '**'
     targetFolder: '/tmp/$(Build.BuildNumber)/hyscale'
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'dev-hyscale-jenkins-artifactory'
+    runOptions: 'commands'
+    commands: '/bin/sed -i "s/@@BUILD_NUMBER@@/$(Build.BuildNumber)/g" /tmp/$(Build.BuildNumber)/hyscale/dev-props.yaml /tmp/$(Build.BuildNumber)/hyscale/stage-props.yaml /tmp/$(Build.BuildNumber)/hyscale/prod-props.yaml'
+
 
