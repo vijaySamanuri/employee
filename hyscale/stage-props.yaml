@@ -1,7 +1,7 @@
 web:
   hfs_mysqlhost: "mydb"
   hfs_mysqlusername: "root"
-  hfs_PASSWORD: "pramati"
+  hfs_PASSWORD: "cHJhbWF0aQ=="
   hfs_REPLICAS: 1
   hfs_MEMORY_LIMIT_IN_MB: 1024
   hfs_STORAGE_CLASS: "standard"
@@ -9,7 +9,7 @@ web:
 db:
   hfsdb_MYSQL_ROOT_PASSWORD: "pramati"
   hfsdb_MYSQL_HOST: "mydb"
-  hfsdb_STORAGE_CLASS: "standard"
+  hfsdb_STORAGE_CLASS: "cHJhbWF0aQ=="
   hfsdb_MYSQL_DATA_DIR_IN_GB: 2
   hfsdb_REPLICAS: 1
   hfsdb_MEMORY_LIMIT_IN_MB: 1024
