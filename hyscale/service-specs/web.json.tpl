@@ -39,9 +39,7 @@
           "basedir": "/tmp",
           "path": "curdoperations-1.war"
         }
-      }
-    ],
-   "artifacts": [
+      },
       {
         "name": "server",
         "destination": "/tmp",
@@ -50,9 +48,7 @@
           "basedir": "/home/ubuntu/",
           "path": "server.xml"
         }
-      }
-    ],
-    "artifacts": [
+      },
       {
         "name": "context",
         "destination": "/tmp",
@@ -69,11 +65,11 @@
 		    "mysqlhost=${mysqlhost}",
 		    "mysqlusername=${mysqlusername}",
 		    "mysqlpassword=${mysqlpassword}",
-		    "sed -i \"s/@mysqlhost@/$mysqlhost/g\"  /usr/local/tomcat/maven-application/config/server.xml",
-		    "sed -i \"s/@mysqlusername@/$mysqlusername/g\"  /usr/local/tomcat/maven-application/config/server.xml",
-		    "sed -i \"s/@mysqlpassword@/$mysqlpassword/g\"  /usr/local/tomcat/maven-application/config/server.xml",
-		    "cp  /usr/local/tomcat/maven-application/config/context.xml /usr/local/tomcat/conf/",
-		    "cp  /usr/local/tomcat/maven-application/config/server.xml  /usr/local/tomcat/conf/server.xml"
+		    "sed -i \"s/@mysqlhost@/$mysqlhost/g\"  /tmp/server.xml",
+		    "sed -i \"s/@mysqlusername@/$mysqlusername/g\" /tmp/server.xml",
+		    "sed -i \"s/@mysqlpassword@/$mysqlpassword/g\"  /tmp/server.xml",
+		    "cp  /tmp/context.xml /usr/local/content/tomcat/current/conf/",
+		    "cp  /tmp/server.xml  /usr/local/content/tomcat/current/conf/"
 		],
       "props": [
           {
