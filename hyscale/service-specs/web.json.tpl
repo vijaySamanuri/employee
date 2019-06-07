@@ -14,6 +14,12 @@
     },
     "dependencies": [
       "mydbtest"
+    ],
+    "deployProps":[
+    {
+    "key":"BUILD_NUMBER",
+    "value":"{{ BUILD_NUMBER | default('1' }}"
+    }
     ]
   },
   "spec": {
