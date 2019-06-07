@@ -27,7 +27,7 @@
         "java:1.8",
         "apache-tomcat:8.5.15"
       ],
-      "os": "Ubuntu 14.04",
+      "os": "Ubuntu:14.04",
     "distribution":"DEBIAN"
    },
    "artifacts": [
@@ -62,7 +62,7 @@
           "path": "context.xml"
         }
       }
-    ]
+    ],
     "config": {
       "commands": [
 		    "#!/bin/bash",
