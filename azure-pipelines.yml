@@ -26,3 +26,4 @@ steps:
     sourceFolder: '$(Agent.BuildDirectory)/s/target'
     contents: '**'
     targetFolder: '/tmp/$(Build.BuildNumber)'
+
