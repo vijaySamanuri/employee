@@ -7,9 +7,9 @@ web:
   hfs_STORAGE_CLASS: "standard"
   BUILD_NUMBER: 7
 db:
-  hfsdb_MYSQL_ROOT_PASSWORD: "pramati"
+  hfsdb_MYSQL_ROOT_PASSWORD: "cHJhbWF0aQ=="
   hfsdb_MYSQL_HOST: "mydb"
-  hfsdb_STORAGE_CLASS: "cHJhbWF0aQ=="
+  hfsdb_STORAGE_CLASS: "standard"
   hfsdb_MYSQL_DATA_DIR_IN_GB: 2
   hfsdb_REPLICAS: 1
   hfsdb_MEMORY_LIMIT_IN_MB: 1024
