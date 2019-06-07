@@ -36,7 +36,7 @@
         "destination": "/usr/local/content/tomcat/current/webapps",
         "source": {
           "store": "jenkins",
-          "basedir": "/tmp/@@BUILD_NUMBER@@",
+          "basedir": "/tmp/{{ BUILD_NUMBER }}",
           "path": "curdoperations-1.war"
         }
       },

@@ -5,7 +5,7 @@ web:
   hfs_REPLICAS: 1
   hfs_MEMORY_LIMIT_IN_MB: 1024
   hfs_STORAGE_CLASS: "standard"
-  BUILD_NUMBER: 7
+  BUILD_NUMBER: @@BUILD_NUMBER@@
 db:
   hfsdb_MYSQL_ROOT_PASSWORD: "cHJhbWF0aQ=="
   hfsdb_MYSQL_HOST: "mydb"
