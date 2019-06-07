@@ -22,8 +22,8 @@ steps:
     goals: 'package'
 - task: CopyFilesOverSSH@0
   inputs:
-    sshEndpoint: 'jumpbox'
-    sourceFolder: '$(Agent.BuildDirectory)/s/target/curdoperations-1.war'
+    sshEndpoint: 'dev-hyscale-jenkins-artifactory'
+    sourceFolder: '$(Agent.BuildDirectory)/s/target'
     contents: '**'
     targetFolder: '/tmp/$(Build.BuildNumber)'
 - task: CopyFilesOverSSH@0
