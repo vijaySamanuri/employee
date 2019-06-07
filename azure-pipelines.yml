@@ -26,4 +26,10 @@ steps:
     sourceFolder: '$(Agent.BuildDirectory)/s/target'
     contents: '**'
     targetFolder: '/tmp/$(Build.BuildNumber)'
+- task: CopyFilesOverSSH@0
+  inputs:
+    sshEndpoint: 'jumpbox'
+    sourceFolder: '$(Agent.BuildDirectory)/s/hyscale'
+    contents: '**'
+    targetFolder: '/tmp/$(Build.BuildNumber)/hyscale'
 
