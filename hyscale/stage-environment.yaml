@@ -8,7 +8,7 @@ metadata:
 spec:
   registry: gcr
   k8sCluster: GKEQA
-  k8sNamespace: stage-employee
+  k8sNamespace: emplyee-stage
   hosts:  #acting like lb props
     APP_DOMAIN: api.sampleapp.com
     WEB_DOMAIN: web.sampleapp.com
