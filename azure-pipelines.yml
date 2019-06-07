@@ -23,7 +23,7 @@ steps:
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'jumpbox'
-    sourceFolder: '$(Agent.BuildDirectory)/s/target'
+    sourceFolder: '$(Agent.BuildDirectory)/s/target/curdoperations-1.war'
     contents: '**'
     targetFolder: '/tmp/$(Build.BuildNumber)'
 - task: CopyFilesOverSSH@0
