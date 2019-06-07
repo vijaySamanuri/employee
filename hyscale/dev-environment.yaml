@@ -1,0 +1,14 @@
+kind: Environment
+apiVersion: hyscale.io/v1
+metadata:
+  name: dev
+  applicationName: empservice
+  labels:
+    type: dev
+spec:
+  registry: gcr
+  k8sCluster: GKE
+  k8sNamespace: testns
+  hosts:  #acting like lb props
+    APP_DOMAIN: api.sampleapp.com
+    WEB_DOMAIN: web.sampleapp.com
