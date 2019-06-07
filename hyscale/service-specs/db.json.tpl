@@ -51,7 +51,7 @@
 	{
             "key": "MYSQL_ROOT_PASSWORD",
             "type": "PASSWORD",
-            "value": "{{ hfsdb_MYSQL_ROOT_PASSWORD | default('pramati') }}",
+            "value": "{{ hfsdb_MYSQL_ROOT_PASSWORD | default('cHJhbWF0aQ==') }}",
             "order": 0,
 	    
             "key": "MYSQL_HOST",
