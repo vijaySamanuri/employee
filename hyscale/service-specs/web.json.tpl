@@ -18,7 +18,7 @@
     "deployProps":[
     {
     "key":"BUILD_NUMBER",
-    "value":"{{ BUILD_NUMBER | default('1' }}"
+    "value":"{{ BUILD_NUMBER | default('1') }}"
     }
     ]
   },
