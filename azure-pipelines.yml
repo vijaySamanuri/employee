@@ -28,13 +28,13 @@ steps:
     targetFolder: '/tmp/$(Build.BuildNumber)'
 - task: CopyFilesOverSSH@0
   inputs:
-    sshEndpoint: 'jumpbox'
+    sshEndpoint: 'hyscalectl-jumpbox'
     sourceFolder: '$(Agent.BuildDirectory)/s/hyscale'
     contents: '**'
     targetFolder: '/tmp/$(Build.BuildNumber)/hyscale'
 - task: SSH@0
   inputs:
-    sshEndpoint: 'jumpbox'
+    sshEndpoint: 'hyscalectl-jumpbox'
     runOptions: 'commands'
     commands: '/bin/sed -i "s/@@BUILD_NUMBER@@/$(Build.BuildNumber)/g" /tmp/$(Build.BuildNumber)/hyscale/dev-props.yaml /tmp/$(Build.BuildNumber)/hyscale/stage-props.yaml /tmp/$(Build.BuildNumber)/hyscale/prod-props.yaml'
 
