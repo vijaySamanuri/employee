@@ -1,19 +1,18 @@
 web:
-  hfs_mysqlhost: "mydb"
-  hfs_mysqlusername: "root"
-  hfs_PASSWORD: "cHJhbWF0aQ=="
-  hfs_REPLICAS: 1
-  hfs_MEMORY_LIMIT_IN_MB: 1024
-  hfs_STORAGE_CLASS: "standard"
+  web_mysqlhost: "mydb"
+  web_mysqlusername: "root"
+  web_PASSWORD: "cHJhbWF0aQ=="
+  web_REPLICAS: 1
+  web_MEMORY_LIMIT_IN_MB: 1024
+  web_STORAGE_CLASS: "standard"
   BUILD_NUMBER: @@BUILD_NUMBER@@
 db:
-  hfsdb_MYSQL_ROOT_PASSWORD: "cHJhbWF0aQ=="
-  hfsdb_MYSQL_HOST: "mydb"
-  hfsdb_STORAGE_CLASS: "standard"
-  hfsdb_MYSQL_DATA_DIR_IN_GB: 2
-  hfsdb_REPLICAS: 1
-  hfsdb_MEMORY_LIMIT_IN_MB: 1024
-
+  db_MYSQL_ROOT_PASSWORD: "cHJhbWF0aQ=="
+  db_MYSQL_HOST: "mydb"
+  db_STORAGE_CLASS: "standard"
+  db_MYSQL_DATA_DIR_IN_GB: 2
+  db_REPLICAS: 1
+  db_MEMORY_LIMIT_IN_MB: 1024
 server:
   name: nginx
   port: 80

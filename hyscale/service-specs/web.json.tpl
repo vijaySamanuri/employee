@@ -4,18 +4,18 @@
   "metadata": {
     "name": "web",
     "version": 1,
-    "replicas": "{{ hfs_REPLICAS | default('1') }}",
+    "replicas": "{{ web_REPLICAS | default('1') }}",
     "resourceLimits": {
-       "memory" : "{{ hfs_MEMORY_LIMIT_IN_MB | default('1024') }}"
+       "memory" : "{{ web_MEMORY_LIMIT_IN_MB | default('1024') }}"
     },
     "labels": {
       "tier": "frontend",
       "externalPorts": [8080]
     },
     "dependencies": [
-      "mydbtest"
-    ],
-    "deployProps":[
+      "db"
+   ],
+  "deployProps":[
     {
     "key":"BUILD_NUMBER",
     "value":"{{ BUILD_NUMBER | default('1') }}"
@@ -33,7 +33,7 @@
         "java:1.8",
         "apache-tomcat:8.5.15"
       ],
-      "os": "Ubuntu:14.04",
+      "os": "Ubuntu 14.04",
     "distribution":"DEBIAN"
    },
    "artifacts": [
@@ -72,26 +72,26 @@
 		    "mysqlusername=${mysqlusername}",
 		    "mysqlpassword=${mysqlpassword}",
 		    "sed -i \"s/@mysqlhost@/$mysqlhost/g\"  /tmp/server.xml",
-		    "sed -i \"s/@mysqlusername@/$mysqlusername/g\" /tmp/server.xml",
+		    "sed -i \"s/@mysqlusername@/$mysqlusername/g\"  /tmp/server.xml",
 		    "sed -i \"s/@mysqlpassword@/$mysqlpassword/g\"  /tmp/server.xml",
 		    "cp  /tmp/context.xml /usr/local/content/tomcat/current/conf/",
-		    "cp  /tmp/server.xml  /usr/local/content/tomcat/current/conf/"
+		    "cp  /tmp/server.xml  /usr/local/content/tomcat/current/conf/server.xml"
 		],
       "props": [
           {
             "key": "mysqlhost",
             "type": "STRING",
-            "value": "{{ hfs_mysqlhost | default('mydb') }}"
+            "value": "{{ web_mysqlhost | default('mydb') }}"
           },
           {
             "key": "mysqlusername",
             "type": "STRING",
-            "value": "{{ hfs_mysqlusername | default('root') }}"
+            "value": "{{ web_mysqlusername | default('root') }}"
           },
           {
             "key": "mysqlpassword",
             "type": "PASSWORD",
-            "value": "{{ hfs_PASSWORD | default('cHJhbWF0aQ==') }}"
+            "value": "{{ web_PASSWORD | default('cHJhbWF0aQ==') }}"
           }
         ] 
     }

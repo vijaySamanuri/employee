@@ -6,6 +6,7 @@ metadata:
   labels:
     type: stage
 spec:
+  predecessor: dev
   registry: gcr
   k8sCluster: GKEQA
   k8sNamespace: emplyee-stage
