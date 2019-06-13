@@ -24,7 +24,7 @@ steps:
   inputs:
     sshEndpoint: 'dev-hyscale-jenkins-artifactory'
     sourceFolder: '$(Agent.BuildDirectory)/s/target'
-    contents: '**'
+    contents: '**/*.war'
     targetFolder: '/tmp/$(Build.BuildNumber)'
 - task: CopyFilesOverSSH@0
   inputs:
